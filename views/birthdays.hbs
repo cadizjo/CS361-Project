@@ -1,0 +1,119 @@
+{{!-- Birthdays page --}}
+<div id="popup-backdrop" class="hidden"></div>
+<main id="birthdays-main-box" class="page-box">
+    <h2 class="page-title">Birthdays</h2>
+
+    {{!-- Table displaying citation data
+    <div class="crud-box">
+        <h3 class="crud-title">Browse Citations</h3>
+        <table class="search-results" border="1" cellpadding="5">
+            <thead>
+                {{!-- print each attribute's key of a row object as a header cell  --}}
+                {{#each citations.[0]}}
+                <th>{{@key}}</th>
+                {{/each}}
+            </thead>
+
+            <tbody>
+                {{!-- print attributes for each row of data --}}
+                {{#each citations}}
+                <tr data-value={{this.citation_id}}>
+                    <td>{{this.citation_id}}</td>
+                    <td>{{this.title}}</td>
+                    <td>{{this.source}}</td>
+                    <td>{{this.author}}</td>
+                    {{#if this.url}} <td>{{this.url}}</td> {{else}} <td>NULL</td> {{/if}}                
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+
+    <p>&nbsp;</p>
+
+    {{!-- Add Citation form --}}
+    <div class="crud-box">
+        <h3 class="crud-title">Add Citation</h3>
+        <form class="insert-form">
+            <fieldset class="fields">
+                <label for="citation-title">Title</label> 
+                <input id="add-citation-title-input" type="text" name="citation-title">
+
+                <label for="source">Source</label> 
+                <input id="add-citation-source-input" type="text" name="source">
+
+                <label for="author">Author</label> 
+                <input id="add-citation-author-input" type="text" name="author">
+
+                <label for="url">URL</label> 
+                <input id="add-citation-url-input" type="url" name="url">
+            </fieldset>
+            <div class="buttons">
+                <input id="add-citation-accept" class="accept-btn" type="submit" value="Submit">
+                <input id="add-citation-cancel" class="cancel-btn" type="button" value="Cancel">
+            </div>
+        </form>
+    </div>
+
+    <p>&nbsp;</p>
+
+    {{!-- Table displaying Task-Citation data --}}
+    <div class="crud-box">
+        <h3 class="crud-title">Browse Task Citations</h3>
+        <table class="search-results" border="1" cellpadding="5">
+            <thead>
+                {{!-- print each attribute's key of a row object as a header cell  --}}
+                {{#each taskCitations.[0]}}
+                <th>{{@key}}</th>
+                {{/each}}
+            </thead>
+
+            <tbody>
+                {{!-- print attributes for each row of data --}}
+                {{#each taskCitations}}
+                <tr>
+                    <td>{{this.task_id}}</td>
+                    <td>{{this.student_name}}</td>
+                    <td>{{this.student_email}}</td>
+                    {{#if this.project_title}} <td>{{this.project_title}}</td> {{else}} <td>NULL</td> {{/if}}
+                    <td>{{this.task_title}}</td>
+                    <td>{{this.citation_id}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+
+    <p>&nbsp;</p>
+
+    {{!-- Add Task-Citation Form --}}
+    <div class="crud-box">
+        <h3 class="crud-title">Add Citation to Task</h3>
+        <form class="search-box">
+            <fieldset class="fields">
+                {{!-- Task select dropdown for Task-Citation  --}}
+                <label for="task">Task</label> 
+                <select id="add-citation-task-task-input" name="task">
+                    {{#each taskDropdown}}
+                    <option value="{{this.task_id}}">{{this.email}} - {{#if this.project_title}} {{this.project_title}} {{else}} NULL {{/if}} - {{this.task_title}}</option>
+                    {{/each}}
+                </select>
+
+                {{!-- Citation select dropdown for Task-Citation  --}}
+                <label for="citation">Citation</label> 
+                <select id="add-citation-task-citation-input" name="citation">
+                    {{#each citationDropdown}}
+                    <option value="{{this.citation_id}}">{{this.title}} - {{this.author}}</option>
+                    {{/each}}
+                </select>
+            </fieldset>
+            <div class="buttons">
+                <input id="add-citation-task-accept" class="accept-btn" type="submit" value="Submit">
+                <input id="add-citation-task-cancel" class="cancel-btn" type="button" value="Cancel">
+            </div>
+        </form>
+    </div>
+
+    <p>&nbsp;</p> --}}
+
+</main>

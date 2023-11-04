@@ -5,6 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "handlebars views/partials/birthdayCard.hbs -f public/birthdayCardTemplate.js",
+    "prestart": "npm run build",
     "start": "node server.js",
     "dev": "nodemon server.js"
   },

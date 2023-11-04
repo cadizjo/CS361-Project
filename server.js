@@ -24,7 +24,11 @@ app.use(express.urlencoded({extended: true}))
 */
 app.get('/', function(req, res) {
     res.status(200).render('index'); // home page   
-});            
+}); 
+
+app.get('/birthdays', function(req, res) {
+    res.status(200).render('birthdays'); // birthdays page  
+});  
 
 app.get("*", function (req, res) {
     console.log("\n  -- 404!");
