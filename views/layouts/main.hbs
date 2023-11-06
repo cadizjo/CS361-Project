@@ -10,20 +10,30 @@
         -->
         <meta charset="utf-8">
         <title>Birthday Tracker</title>
-        <link rel="stylesheet" href="/style.css">
+        {{!-- Third parties --}}
 
         <!-- Boxicons CSS -->
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        {{!-- Ionicons install --}}
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
         {{!-- Google Fonts --}}
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@300;500&family=Work+Sans:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@300;400;500;600&family=Quicksand:wght@500&family=Work+Sans:wght@500&display=swap" rel="stylesheet">
         {{!-- Font Awesome Icons --}}
         <script src="https://kit.fontawesome.com/6c8dc9b3e5.js" crossorigin="anonymous"></script> 
+        {{!-- Chosen (A jQuery Plugin - makes long, unwieldy select boxes much more user-friendly.) --}}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
+        <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet"/>
         
         {{!-- main JS script --}}
         <script type="application/javascript" src="/index.js" charset="utf-8" defer></script>
         {{!-- handlebars JS template  --}}
         <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.runtime.js"></script>
-        <script src="/birthdayCardTemplate.js" charset="utf-8" defer></script>
+        <script src="birthdayCardTemplate.js" charset="utf-8" defer></script>
+
+        {{!-- main CSS stylesheet --}}
+        <link rel="stylesheet" href="/style.css">
     </head>
 
     <body>

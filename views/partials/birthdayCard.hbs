@@ -1,0 +1,32 @@
+<div class="bday-card-box">
+    <div class="bday-card-inner">
+        {{!-- Bday Picture as Background --}}
+        <div class="front" style="background: url({{img_url}}); background-size: cover; background-position: center;">
+            <scan class="bday-name-box">
+                <!-- Bday Card Name-->
+                <h2 class="bday-name">
+                    {{name}}
+                </h2>
+            </scan>
+            <!-- Bday Card Info-->
+            <scan class="bday-info-box">
+                <h3 class="bday-age">
+                    {{age}} years old,
+                </h3>
+                <h3 class="bday-date">
+                    {{date}}
+                </h3>
+            </scan>
+            <!-- Bday Card Buttons-->
+            <scan class="bday-btn-box">
+                <button id="bday-card-gift">Generate Gift</button>
+                <button id="bday-card-edit">Edit</button>
+                <button id="bday-card-delete">Delete</button>
+            </scan>
+        </div>
+
+        {{!-- Back contents --}}
+        {{!-- <div class="back"</div> --}}
+
+    </div>
+</div>

@@ -1,0 +1,55 @@
+<div id="modal-backdrop" class="hidden"></div>
+
+<div id="modal-container">
+    <section id="add-bday-modal" class="modal hidden">
+        <header>Add Birthday</header>
+        <form class="form">
+            <div class="input-box">
+                <label for="name-input">Full Name</label>
+                <input id="name-input" name="name-input" type="text" placeholder="Enter full name" required>
+            </div>
+            <div class="input-box">
+                <label for="date-input">Date of Birth</label>
+                <input id="date-input" name="date-input" type="date" required>
+            </div>
+            <h3>Profile Image</h3>
+            <div class="img-option-box">
+                <div class="img-option">
+                    <input id="img-select1-input" name="img-select" type="radio">
+                    <label for="img-select1-input">Image URL</label>
+                </div>
+                <div class="img-option">
+                    <input id="img-select2-input" name="img-select" type="radio">
+                    <label for="img-select2-input">Upload Image</label>
+                </div>
+            </div>
+            <div class="img-option-box input-box">
+                <input id="img-url-input" class="hidden" name="img-url" type="text" placeholder="Enter full image URL">
+                <input id="img-upload-input" class="hidden file-upload" name="img-upload" type="file" accept="image/*">
+            </div>
+            <div class="interest-input-box">
+                <form method="post">
+                    <label for="interests-input">Interests</label>
+                    <select id="interests-input" data-placeholder="Begin typing to filter interests" multiple class="chosen-select input-box">
+                        <option value=""></option>
+                        <option>Photography</option>
+                        <option>Dance</option>
+                        <option>Backpacking</option>
+                        <option>Drawing</option>
+                        <option>Camping</option>
+                        <option>Fishing</option>
+                        <option>Cooking</option>
+                        <option>Gardening</option>
+                        <option>Sports</option>
+                        <option>Painting</option>
+                    </select>
+                </form>
+            </div>
+
+            <div class="button-box">
+                <input id="cancel-btn" class="modal-btn" type="button" value="Cancel">
+                <input id="submit-btn" class="modal-btn" type="submit">
+            </div>
+        </form>
+    </section>
+</div>

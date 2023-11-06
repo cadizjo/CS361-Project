@@ -7,13 +7,16 @@
     font-family: 'Poppins', sans-serif;
 }
 
-main {
-    padding: 15px;
+body {
+    min-height: 100vh;
+    overflow: scroll;
+    background: linear-gradient(135deg, #e3dbf6, #ffe0ee);
 }
 
-body {
-    min-height: 100%;
-    background: #ffe0ee;
+main {
+    padding: 15px;
+    overflow: scroll;
+    width: 100vw;
 }
 
 nav {
@@ -26,6 +29,7 @@ nav {
     align-items: center;
     background: #fff;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+    z-index: 1060;
 }
 
 nav .logo {
@@ -117,6 +121,7 @@ nav.open .sidebar {
     pointer-events: none;
     transition: all 0.4s ease;
     background: rgba(0, 0, 0, 0.3);
+    z-index: 1050;
 }
 
 nav.open ~ .overlay {
@@ -125,3 +130,289 @@ nav.open ~ .overlay {
     left: 300px;
     pointer-events: auto;
 }
+
+.hidden {
+    display: none;
+}
+
+#modal-container.on {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-height: 100%;
+}
+
+.modal {
+    position: fixed;
+    width: fit-content;
+    width: 500px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 1100;
+}
+
+.modal header {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+}
+
+.modal .form {
+    margin-top: 30px;
+}
+
+.form .input-box, .interest-input-box {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form .input-box.img-option-box {
+    margin: 0;
+}
+
+.input-box label {
+    color: #333;
+}
+
+.input-box input, .chosen-container-multi .chosen-choices {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #707070;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+    overflow: scroll;
+}
+
+.input-box input.file-upload {
+    border: none;
+    position: relative;
+    top: 15px;
+}
+
+.input-box input:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.chosen-container.chosen-container-multi {
+    display: block;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.chosen-container-multi .chosen-choices li.search-field input[type=text] {
+    font-family: 'Poppins';
+    /* color: #707070; */
+}
+
+.chosen-container .chosen-results {
+    max-height: 150px;
+}
+
+.form h3 {
+    margin-top: 20px;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.form :where(.img-option-box, .img-option) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 50px;
+    font-weight: 200;
+    padding-left: 5px;
+}
+
+.form .img-option {
+    column-gap: 5px;
+}
+
+.form :where(.img-option input, .img-option label) {
+    cursor: pointer;
+}
+
+.img-option input {
+    accent-color: rgb(220, 65, 94);
+}
+
+.button-box {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#submit-btn, #cancel-btn {
+    height: 55px;
+    font-size: 1rem;
+    font-weight: 400;
+    min-width: 45%;
+    max-width: 100%;
+    margin-top: 30px;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    background-color: rgb(255, 103, 131);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#submit-btn:hover, #cancel-btn:hover {
+    background-color: rgb(220, 65, 94);
+}
+
+#modal-backdrop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1090;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+#add-bday-btn {
+    display: inline-flex;
+    height: 75px;
+    padding: 0;
+    border: none;
+    outline: none;
+    border-radius: 35px;
+    overflow: hidden;
+    background: rgb(255, 103, 131);
+    font-size: 25px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+}
+
+#add-bday-btn:hover {
+    background: rgb(220, 65, 94);
+}
+
+#add-bday-btn .label,
+#add-bday-btn .icon  {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 24px;
+    height: 100%;
+    font-weight: 500;
+    color: #fff;
+}
+
+#add-bday-btn .icon {
+    font-size: 1.5em;
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.bday-card-box {
+    background: #fff;   
+    width: 400px;
+    height: 550px;
+    font-size: 20px;
+    border-radius: 15px;
+    margin: 20px;
+}
+
+.bday-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.front {
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #fff;
+}
+
+.front h2 {
+    font-weight: 500;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.front h3 {
+    margin-right: 8px;
+    color: #e3dbf6;
+    font-size: 18px;
+    font-weight: 200;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.bday-info-box {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+}
+
+.bday-btn-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.bday-btn-box button {
+    width: 100px;
+    border: 1px solid #fff;
+    background: transparent;
+    border-radius: 50px;
+    padding: 5px;
+    cursor: pointer;
+    color: #fff;
+    transition: all 0.2s ease;
+}
+
+.bday-btn-box button:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+#birthdays-main-box {
+    padding: 0;
+    position: relative;
+}
+
+#birthdays-main-box .page-title {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+}
+
+#bday-cards-container {
+    width: 100%;
+    height: 715px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 0 20px;
+    overflow: scroll;
+    padding-top: 0;
+}
+

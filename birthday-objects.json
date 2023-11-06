@@ -1,0 +1,202 @@
+[
+  {
+    "name": "Jona",
+    "age": 20,
+    "date": "2003-08-19",
+    "date_string": "August 19",
+    "img_url": "https://i.pinimg.com/736x/83/bc/8b/83bc8b88cf6bc4b4e04d153a418cde62.jpg",
+    "interests": [
+      "Brown Bear",
+      "Sloth Bear"
+    ]
+  },
+  {
+    "name": "Jenai",
+    "age": 14,
+    "date": "2009-07-19",
+    "date_string": "July 19",
+    "img_url": "blob:http://localhost:4261/6d869180-3eba-42c2-8f62-df8dc0ed6d9e",
+    "interests": [
+      "Brown Bear",
+      "Giant Panda",
+      "Sloth Bear"
+    ]
+  },
+  {
+    "name": "test",
+    "age": 22,
+    "date": "2000-11-05",
+    "date_string": "November 5",
+    "img_url": "test",
+    "interests": [
+      "Brown Bear",
+      "Giant Panda"
+    ]
+  },
+  {
+    "name": "Jonah Cadiz",
+    "age": 0,
+    "date": "2023-11-03",
+    "date_string": "November 3",
+    "img_url": "blob:http://localhost:4261/cd9bfec8-9b32-4301-a0ac-981bd3f19ebf",
+    "interests": [
+      "Asiatic Black Bear",
+      "Brown Bear",
+      "Giant Panda",
+      "Sun Bear"
+    ]
+  },
+  {
+    "name": "Jona",
+    "age": 20,
+    "date": "2003-08-19",
+    "date_string": "September 19",
+    "img_url": "https://i.pinimg.com/736x/83/bc/8b/83bc8b88cf6bc4b4e04d153a418cde62.jpg",
+    "interests": [
+      "Brown Bear",
+      "Sloth Bear"
+    ]
+  },
+  {
+    "name": "Mary Cadiz",
+    "age": 43,
+    "date": "1980-07-10",
+    "date_string": "July 10",
+    "img_url": "https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510_640.jpg",
+    "interests": [
+      "Brown Bear",
+      "Giant Panda",
+      "Sloth Bear",
+      "Sun Bear"
+    ]
+  },
+  {
+    "name": "vreunio",
+    "age": 1,
+    "date": "2023-11-11",
+    "date_string": "November 11",
+    "img_url": "https://i.pinimg.com/736x/83/bc/8b/83bc8b88cf6bc4b4e04d153a418cde62.jpg",
+    "interests": []
+  },
+  {
+    "name": "uveinow",
+    "age": 1,
+    "date": "2023-12-01",
+    "date_string": "December 1",
+    "img_url": "",
+    "interests": [
+      "Asiatic Black Bear"
+    ]
+  },
+  {
+    "name": "ugh",
+    "age": 1,
+    "date": "2023-11-09",
+    "date_string": "November 9",
+    "img_url": "",
+    "interests": []
+  },
+  {
+    "name": "test2",
+    "age": 1,
+    "date": "2023-11-08",
+    "date_string": "November 8",
+    "img_url": "https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg",
+    "interests": [
+      "Asiatic Black Bear",
+      "Brown Bear",
+      "Giant Panda"
+    ]
+  },
+  {
+    "name": "test3",
+    "age": 0,
+    "date": "2023-01-01",
+    "date_string": "January 1",
+    "img_url": "https://i.pinimg.com/736x/83/bc/8b/83bc8b88cf6bc4b4e04d153a418cde62.jpg",
+    "interests": []
+  },
+  {
+    "name": "test4",
+    "age": 0,
+    "date": "2023-05-18",
+    "date_string": "May 18",
+    "img_url": "https://i.pinimg.com/736x/83/bc/8b/83bc8b88cf6bc4b4e04d153a418cde62.jpg",
+    "interests": []
+  },
+  {
+    "name": "Dad",
+    "age": 49,
+    "date": "1974-02-20",
+    "date_string": "February 20",
+    "img_url": "https://img.freepik.com/free-photo/space-background-realistic-starry-night-cosmos-shining-stars-milky-way-stardust-color-galaxy_1258-154643.jpg",
+    "interests": [
+      "Brown Bear",
+      "Giant Panda",
+      "Sun Bear"
+    ]
+  },
+  {
+    "name": "ber",
+    "age": 1,
+    "date": "2023-11-15",
+    "date_string": "November 15",
+    "img_url": "",
+    "interests": [
+      "Dance",
+      "Backpacking"
+    ]
+  },
+  {
+    "name": "btr",
+    "age": 1,
+    "date": "2023-11-10",
+    "date_string": "November 10",
+    "img_url": "https://i.pinimg.com/736x/83/bc/8b/83bc8b88cf6bc4b4e04d153a418cde62.jpg",
+    "interests": [
+      "Backpacking"
+    ]
+  },
+  {
+    "name": "treb",
+    "age": 1,
+    "date": "2023-11-22",
+    "date_string": "November 22",
+    "img_url": "",
+    "interests": [
+      "Backpacking"
+    ]
+  },
+  {
+    "name": "hihi",
+    "age": 1,
+    "date": "2023-11-15",
+    "date_string": "November 15",
+    "img_url": "https://i.pinimg.com/736x/83/bc/8b/83bc8b88cf6bc4b4e04d153a418cde62.jpg",
+    "interests": [
+      "Drawing",
+      "Camping"
+    ]
+  },
+  {
+    "name": "hihihi",
+    "age": 1,
+    "date": "2023-11-18",
+    "date_string": "November 18",
+    "img_url": "https://i.pinimg.com/736x/83/bc/8b/83bc8b88cf6bc4b4e04d153a418cde62.jpg",
+    "interests": [
+      "Backpacking"
+    ]
+  },
+  {
+    "name": "hihihihi",
+    "age": 1,
+    "date": "2023-11-25",
+    "date_string": "November 25",
+    "img_url": "https://i.pinimg.com/736x/83/bc/8b/83bc8b88cf6bc4b4e04d153a418cde62.jpg",
+    "interests": [
+      "Backpacking",
+      "Camping"
+    ]
+  }
+]
