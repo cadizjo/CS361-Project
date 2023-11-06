@@ -166,4 +166,7 @@ function sortByDate(objArray) {
     else if (futureDateObjects.length == 0)
         return objArray
 }
+
+
+// New functionality? Filter birthday profiles (eg. Recent Birthdays)
   

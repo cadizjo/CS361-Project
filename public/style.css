@@ -416,3 +416,28 @@ nav.open ~ .overlay {
     padding-top: 0;
 }
 
+#home-main-box {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+#home-main-box .section {
+    margin: 20px;
+}
+
+.section .tutorial {
+    height: 100%;
+    position: relative;
+    left: 30px;
+}
+
+.tutorial ol ol {
+    position: relative;
+    left: 30px;
+}
+
+.tutorial ol ul {
+    position: relative;
+    left: 30px;
+}
