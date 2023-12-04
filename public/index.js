@@ -173,3 +173,57 @@ if (addCardSubmit) {
         }
     })
 }
+
+
+// generate gift functionalities
+var generateGiftBtns = document.getElementsByClassName('bday-card-gift');
+if (generateGiftBtns) {
+    for (var i = 0; i < generateGiftBtns.length; i++) {
+        generateGiftBtns[i].addEventListener('click', function(event) {
+            // whenever gift button is clicked, use event obj to locate corresponding record ID of bday card
+            var btnClicked = event.currentTarget
+            var recordId = btnClicked.parentElement.parentElement.parentElement.parentElement.getAttribute("data-value")
+
+            fetch("/generateGift", {
+                method: "POST",
+                body: JSON.stringify({recordId}),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+
+                // pre-fill popup with generated gift idea
+                var popupName = document.querySelector("#gift-popup .name")
+                popupName.textContent = data.name
+
+                var popupDesc = document.querySelector("#gift-popup .desc")
+                popupDesc.textContent = data.description
+
+                var giftBackdrop = document.getElementById("gift-popup-backdrop")
+                giftBackdrop.classList.remove("hidden")
+
+                var popup = document.getElementById("gift-popup")
+                popup.classList.add("active")
+            })
+        })
+    }
+}
+
+var giftPopupClose = [
+    document.getElementById("gift-popup-backdrop"),
+    document.getElementById("gift-popup-close")
+]
+
+giftPopupClose.forEach((elem) => {
+    if (elem) {
+        elem.addEventListener("click", () => {
+            var popup = document.getElementById("gift-popup")
+            popup.classList.remove("active")
+
+            var giftBackdrop = document.getElementById("gift-popup-backdrop")
+            giftBackdrop.classList.add("hidden")
+        })
+    }
+})

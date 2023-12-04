@@ -14,17 +14,13 @@ app.use(express.static("public/"))              // all files in public directory
 app.use(express.json())                         // to read/handle/parse JSON objects
 app.use(express.urlencoded({extended: true}))
        
-// file manipulation
-var fs = require("fs")
+var fs = require("fs") // file manipulation
 var birthdayObjects = require("./birthday-objects.json") // store added birthdays
 
 /*
     ROUTES
 */
 
-/*
-    PROCESS SELECT/READ QUERIES
-*/
 app.get('/', function(req, res) {
     res.status(200).render('index'); // home page   
 }); 
@@ -45,6 +41,7 @@ app.get('/birthdays', function(req, res) {
         var renderthisObj
         for (var i = 0; i < json.length; i++) {
             renderthisObj = {
+                id: json[i].id,
                 name: json[i].name,
                 age: json[i].age,
                 date: json[i].date_string,
@@ -64,7 +61,7 @@ app.post('/addBirthday', function(req, res) {
 
     // convert numerical date to full Month name and day
     var convertDate = new Date(data.date)
-    convertDate.setDate(convertDate.getDate() + 1) // add 1 day since getDay() returns the prev date
+    convertDate.setDate(convertDate.getDate() + 1) // add 1 day since getDate() returns the prev date
 
     var month = convertDate.toLocaleString('default', { month: 'long' })
     var day = convertDate.getDate().toString()
@@ -80,8 +77,16 @@ app.post('/addBirthday', function(req, res) {
     if (data.imgUrl == null || data.imgUrl == "") 
         data.imgUrl = "https://i.pinimg.com/736x/83/bc/8b/83bc8b88cf6bc4b4e04d153a418cde62.jpg"
 
+    // generate unique ID for new record
+    var uid = () => {
+        var dateString = Date.now().toString(36);
+        var randomness = Math.random().toString(36).substr(2);
+        return dateString + randomness;
+    }
+
     // create obj from user data and write to JSON
     var birthdayData = {
+        id: uid(),
         name: data.name,
         age: age,
         date: data.date,
@@ -91,6 +96,34 @@ app.post('/addBirthday', function(req, res) {
     }
     storeObj(birthdayData)
     res.sendStatus(200) // send response to client
+})
+
+app.post('/generateGift', function(req, res) {
+    var id = req.body.recordId
+
+    // read JSON objects file (synchronous)
+    var file = fs.readFileSync("./birthday-objects.json")
+    var json = JSON.parse(file)
+
+    // parse file and get interests of record w/specific id
+    var interests = null
+    for (var i = 0; i < json.length; i++) {
+        if (json[i].id == id)
+            interests = json[i].interests
+    } 
+
+    // send HTTP request to microservice and get gift idea
+    fetch("http://127.0.0.1:5000/gift-ideas", {
+        method: "POST",
+        body: JSON.stringify({interests}),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        res.status(200).send(data) // send response data to client
+    })
 })
 
 app.get("*", function (req, res) {
@@ -119,9 +152,6 @@ function storeObj(obj) {
         birthdayObjects = JSON.parse(data)
         birthdayObjects.push(obj)
         fs.writeFileSync("./birthday-objects.json", JSON.stringify(birthdayObjects, null, 2))
-        // setTimeout(function () {
-        //     fs.writeFile("./birthday-objects.json", JSON.stringify(birthdayObjects, null, 2), function (err) {})
-        // }, 300) // 300 ms delay, otherwise this all happens too fast and writes to the file twice essentially
     })
 } 
 
