@@ -157,17 +157,6 @@ if (addCardSubmit) {
                 if (res.status == 200) {
                     closeModal()
                     window.location.href = '/birthdays'
-
-                    // Add object to client DOM
-                    // console.log(bday[1])
-                    // var birthdayCardHtml = Handlebars.templates.birthdayCard({
-                    //     name: name,
-                    //     age: 0,
-                    //     date: bday,
-                    //     img_url: imgUrl
-                    // })
-                    // var birthdaysContainer = document.getElementById('birthday-cards-box')
-                    // birthdaysContainer.insertAdjacentHTML('beforeend', birthdayCardHtml)
                 }
             })
         }

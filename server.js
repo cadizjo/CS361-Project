@@ -99,6 +99,7 @@ app.post('/addBirthday', function(req, res) {
 })
 
 app.post('/generateGift', function(req, res) {
+    console.log("\nSending Request...")
     var id = req.body.recordId
 
     // read JSON objects file (synchronous)
@@ -122,6 +123,7 @@ app.post('/generateGift', function(req, res) {
     })
     .then(response => response.json())
     .then(data => {
+        console.log("Receiving generated gift...")
         res.status(200).send(data) // send response data to client
     })
 })
@@ -141,7 +143,9 @@ app.listen(PORT, function(err) {
 });
 
 
-// helper functions
+/*
+    HELPER FUNCTIONS
+*/
 
 // store a birthday obj to json file
 function storeObj(obj) {

@@ -121,9 +121,11 @@ def getGift():
         # select one gift idea at random
         if giftList:
             selectedGift = random.choice(giftList)
+            print("Generated Gift: " + selectedGift['name'])
             return jsonify(selectedGift)
         else:
             selectedGift = random.choice(giftObjects)
+            print("Generated Gift: " + selectedGift['name'])
             return jsonify(selectedGift) # if no matching interests, return random idea from whole set
 
     except Exception as e:
